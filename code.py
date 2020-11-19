@@ -8,5 +8,9 @@ print("Your name")
 print("heyyyyyyy")
 a="hello"
 b="Mercy"
+print("hi")
+a="mmmmmmm"
+b="how far"
 c="Hello there"
 d="what's up"
+

@@ -10,8 +10,10 @@ a="hello"
 b="Mercy"
 print("hi")
 a="very happy"
-b="how far"
+b="very far"
 c="Hello there"
 d="what's up"
 e="mercytopsy"
+f="You are great!"
+
 

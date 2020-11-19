@@ -5,7 +5,7 @@ my_name = 'Kehinde'
 my_hobby = 'Tableau'
 my_workplace = 'Cndro'
 print("Your name")
-print("hi")
+print("heyyyyyyy")
 a="hello"
 b="Mercy"
 c="Hello there"

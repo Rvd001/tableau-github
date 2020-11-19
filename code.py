@@ -10,5 +10,7 @@ a="very happy"
 b="how far"
 c="Hello there"
 d="what's up"
-e="mercytopsy"
+e="mercyhey"
+g="very well"
+
 

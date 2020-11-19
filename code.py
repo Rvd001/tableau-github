@@ -24,4 +24,6 @@ d="maleficient"
 d="maleficiency"
 d="maleficiency"
 d="maleficientt"
+e="mercyhey"
+g="very well"
 

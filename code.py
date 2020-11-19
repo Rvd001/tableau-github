@@ -22,3 +22,6 @@ b="Mercy"
 c="evolve"
 d="maleficient"
 d="maleficiency"
+d="maleficiency"
+d="maleficientt"
+

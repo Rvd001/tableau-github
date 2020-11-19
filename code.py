@@ -8,4 +8,5 @@ print("Your name")
 print("hi")
 a="hello"
 b="Mercy"
-
+c="Hello there"
+d="what's up"

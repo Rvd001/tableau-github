@@ -6,7 +6,7 @@ my_hobby = 'Tableau'
 my_workplace = 'Cndro'
 print("Your name")
 print("hi")
-a="mmmmmmm"
+a="very happy"
 b="how far"
 c="Hello there"
 d="what's up"

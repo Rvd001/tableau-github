@@ -15,5 +15,6 @@ c="Hello there"
 d="what's up"
 e="mercytopsy"
 f="You are great!"
+g="wonderful"
 
 

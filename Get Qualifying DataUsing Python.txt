@@ -1,0 +1,46 @@
+import pandas as pd
+import requests
+
+
+df = pd.read_csv("Formula_One_World_Championship.csv")
+
+count = 0
+Qualifying = []
+
+
+for k in df['Report Link']:
+    r = requests.get(k)
+    df_list = pd.read_html(r.text)
+    
+    i = 0
+    while i < len(df_list):
+        #print(df_list[i])
+        if len(df_list[i].columns) == 6:
+            data = df_list[i]
+            data.columns = ['Position', 'No', 'Driver', 'Constructor', 'Parts','Grid']
+            data['Link'] = k
+            Qualifying.append(data)
+            
+        elif len(df_list[i].columns) == 7:
+            data = df_list[i]
+            data.columns = ['Position', 'No', 'Driver', 'Constructor', 'Part 1', 'Part 2','Grid']
+            data['Link'] = k
+            Qualifying.append(data)
+        
+        elif len(df_list[i].columns) == 8:
+            data = df_list[i]
+            data.columns = ['Position', 'No', 'Driver', 'Constructor', 'Part 1', 'Part 2','Part 3','Grid']
+            data['Link'] = k
+            Qualifying.append(data)
+            
+        else:
+            #print(df_list[i])
+            print("That ALL")
+        
+        i = i+1
+        
+
+    count = count + 1
+    print(count)
+QualifyingData = pd.concat(Qualifying,ignore_index=True,axis=0)
+QualifyingData.to_csv("QualifyingData.csv")

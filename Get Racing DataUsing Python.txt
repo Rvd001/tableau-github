@@ -1,0 +1,29 @@
+import pandas as pd
+import requests
+
+df = pd.read_csv("Formula_One_World_Championship.csv")
+
+count = 0
+Racing = []
+
+for k in df['Report Link']:
+    r = requests.get(k)
+    df_list = pd.read_html(r.text)
+    
+    i = 0
+    while i < len(df_list):
+        
+        if len(df_list[i].columns) == 8 and df_list[i].columns[-1]=='Points':
+            data = df_list[i]
+            data.columns = ['Position', 'No','Driver', 'Constructor', 'Laps', 'Time/Retired' ,'Grid', 'Points']
+            data['Link'] = k
+            Racing.append(data)
+
+        else:
+            print("That ALL")
+        
+        i = i+1
+    count = count + 1
+    print(count)
+RacingData = pd.concat(Racing,ignore_index=True,axis=0)
+RacingData.to_csv("RacingData.csv")
